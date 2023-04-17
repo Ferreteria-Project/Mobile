@@ -4,42 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/ic_launcher_background"
+    android:backgroundTint="#F9CD16"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageView
+        android:id="@+id/OvaloGris"
+        android:layout_width="416dp"
+        android:layout_height="125dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ferreteria"
-        android:textSize="100px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/interfaz2" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guardando cambios en git"
-        android:textSize="100px"
+    <ImageView
+        android:id="@+id/OvaloGris2"
+        android:layout_width="426dp"
+        android:layout_height="101dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/interfaz3" />
+
+    <ImageView
+        android:id="@+id/CuadradoBlancoFondo"
+        android:layout_width="378dp"
+        android:layout_height="552dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653"
+        app:srcCompat="@drawable/cuadrofondoblanco" />
+
+    <ImageView
+        android:id="@+id/CirculoNegro"
+        android:layout_width="215dp"
+        android:layout_height="201dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        app:srcCompat="@drawable/circulonegro" />
+
+    <ImageView
+        android:id="@+id/LogoFerreteria"
+        android:layout_width="171dp"
+        android:layout_height="166dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/CirculoNegro"
+        app:layout_constraintEnd_toEndOf="@+id/CirculoNegro"
+        app:layout_constraintStart_toStartOf="@+id/CirculoNegro"
+        app:layout_constraintTop_toTopOf="@+id/CirculoNegro"
+        app:layout_constraintVertical_bias="0.473"
+        app:srcCompat="@drawable/logoferreteria" />
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:paddingStart="13dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toTopOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableStart="@drawable/cerrar"
+        android:drawablePadding="10dp"
+        android:elevation="5dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        android:paddingStart="13dp"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@+id/labelLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Log In"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtUsername"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toBottomOf="@+id/CirculoNegro"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/LabelRestablecer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Has olvidado tu contraseña? Restablecer"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <TextView
+        android:id="@+id/labelRestablecer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes una cuenta? Registrate"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogIn"
+        app:layout_constraintVertical_bias="0.073" />
+
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="265dp"
+        android:layout_height="60dp"
+        android:text="Iniciar Sesión"
+        app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
+        app:layout_constraintTop_toBottomOf="@+id/LabelRestablecer"
+        app:layout_constraintVertical_bias="0.311" />
 
 </android.support.constraint.ConstraintLayout>
