@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_launcher_background"
     android:backgroundTint="#F9CD16"
-    tools:context=".MainActivity" >
+    tools:context=".LogIn" >
 
     <ImageView
         android:id="@+id/OvaloGris"
@@ -78,13 +78,14 @@
         android:layout_height="55dp"
         android:layout_marginTop="200dp"
         android:background="@drawable/custom_edittext"
-        android:drawableStart="@drawable/user"
+        android:drawableStart="@drawable/user2"
         android:drawablePadding="10dp"
         android:elevation="5dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
         android:paddingStart="13dp"
+        android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
@@ -97,13 +98,14 @@
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:background="@drawable/custom_edittext"
-        android:drawableStart="@drawable/cerrar"
+        android:drawableStart="@drawable/cerrar2"
         android:drawablePadding="10dp"
         android:elevation="5dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
         android:paddingStart="13dp"
+        android:textColor="@color/black"
         android:textColorHint="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
@@ -129,7 +131,9 @@
         android:id="@+id/LabelRestablecer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Has olvidado tu contraseña? Restablecer"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:text="¿Has olvidado tu contraseña?"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
@@ -138,27 +142,56 @@
         app:layout_constraintVertical_bias="0.055" />
 
     <TextView
-        android:id="@+id/labelRestablecer"
+        android:id="@+id/LabelRegistrarse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿No tienes una cuenta? Registrate"
+        android:text="¿No tienes una cuenta?"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintTop_toBottomOf="@+id/btnLogIn"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.212" />
 
     <Button
         android:id="@+id/btnLogIn"
-        android:layout_width="265dp"
-        android:layout_height="60dp"
+        android:layout_width="292dp"
+        android:layout_height="54dp"
+        android:background="@drawable/custom_buttongrey"
         android:text="Iniciar Sesión"
         app:layout_constraintBottom_toBottomOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintEnd_toEndOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintStart_toStartOf="@+id/CuadradoBlancoFondo"
         app:layout_constraintTop_toBottomOf="@+id/LabelRestablecer"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.31" />
+
+    <Button
+        android:id="@+id/btnrestablecer"
+        android:layout_width="180dp"
+        android:layout_height="18dp"
+        android:alpha="0"
+        android:backgroundTint="@android:color/transparent"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="@+id/LabelRestablecer"
+        app:layout_constraintEnd_toEndOf="@+id/LabelRestablecer"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/LabelRestablecer"
+        app:layout_constraintTop_toTopOf="@+id/LabelRestablecer"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <Button
+        android:id="@+id/btnRegistrarseL"
+        android:layout_width="180dp"
+        android:layout_height="18dp"
+        android:alpha="0"
+        android:backgroundTint="@android:color/transparent"
+        android:text=" "
+        app:layout_constraintBottom_toTopOf="@+id/OvaloGris"
+        app:layout_constraintEnd_toEndOf="@+id/LabelRegistrarse"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/LabelRegistrarse"
+        app:layout_constraintTop_toTopOf="@+id/LabelRegistrarse"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
